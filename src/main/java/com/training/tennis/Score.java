@@ -1,7 +1,9 @@
 package com.training.tennis;
 
+import com.training.tennis.state.GameState;
+
 /**
- * The {@link ScoreState} enum is ...
+ * The {@link GameState} enum represents the tennis game scored points.
  *
  * @author mohammed aboulfadle
  * @since 2025.03

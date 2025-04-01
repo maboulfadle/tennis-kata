@@ -1,18 +1,18 @@
-package com.training.tennis.impl;
+package com.training.tennis.state.impl;
 
+import com.training.tennis.Game;
 import com.training.tennis.Player;
-import com.training.tennis.ScoreState;
-import com.training.tennis.TennisGameContext;
+import com.training.tennis.state.GameState;
 
 import static java.text.MessageFormat.format;
 
 /**
- * The {@link AdvantageState} class is an implementation of {@link ScoreState} that represent the advantage game state.
+ * The {@link AdvantageState} class is an implementation of {@link GameState} that represent the advantage game state.
  *
  * @author mohammed aboulfadle
  * @since 2025.03
  */
-public class AdvantageState implements ScoreState {
+public class AdvantageState implements GameState {
 
     private final Player advantagePlayer;
 
@@ -26,17 +26,17 @@ public class AdvantageState implements ScoreState {
     }
 
     @Override
-    public void scorePoint(final TennisGameContext context, final Player player) {
+    public void updateState(final Game game, final Player player) {
         if (player == advantagePlayer) {
-            context.setWinner(player);
+            game.setState(new GameOverState(player));
 
         } else {
-            context.setState(new DeuceState());
+            game.setState(new DeuceState());
         }
     }
 
     @Override
-    public String getScore(final TennisGameContext context) {
+    public String getScore() {
         return format("advantage player {0}", advantagePlayer.getSymbol());
     }
 }

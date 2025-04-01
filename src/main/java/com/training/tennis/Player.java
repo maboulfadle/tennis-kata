@@ -1,7 +1,7 @@
 package com.training.tennis;
 
 /**
- * The {@link ScoreState} class is ...
+ * The {@link Player} class represents the tennis game player.
  *
  * @author mohammed aboulfadle
  * @since 2025.03
