@@ -26,14 +26,14 @@ Or run the `Main` main method from your IDE (IntelliJ, Eclipse, VS Code).
 ```sh
 mvn test
 ```
-### ✅ Test Cases Covered:
+### Test Cases Covered:
 - normal progression (`15`, `30`, `40`)
 - **deuce** scenarios
 - **advantage** scenarios
 - **winning conditions**
 - **Invalid input handling**
 
-## 📦 Dependencies (pom.xml)
+## Dependencies (pom.xml)
 ```xml
 <dependencies>
     <dependency>
@@ -51,7 +51,7 @@ mvn test
 </dependencies>
 ```
 
-## 📜 Example Game Output
+## Example Game Output
 ### Input: `"ababaa"`
 ```sh
 player a: 15 & player b: 0
