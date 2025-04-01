@@ -61,8 +61,3 @@ player a: 30 & player b: 30
 player a: 40 & player b: 30
 player a wins the game
 ```
-
-## 📌 Improvements
-- Implement **DDD (Domain-Driven Design)** for event handling.
-- Add a GUI version for better visualization.
-- Extend to **full tennis sets**.
